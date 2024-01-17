@@ -22,9 +22,6 @@ def count_gc(sequence):
 
     gc_content = sum_gc / total_nucleotides * 100
 
-    # format is generally used to replace a value with another desired value
-    # takes the value in parentheses and inserts it into the formatted string (6f)
-
     return gc_content
 
 
@@ -37,6 +34,9 @@ def find_max_gc(fasta_dict):
         if current_gc_content > max_gc_content:
             max_gc_content = current_gc_content
             max_gc_id = sequence_id
+
+    # format is generally used to replace a value with another desired value
+    # takes the value in parentheses and inserts it into the formatted string (6f)
 
     return max_gc_id, "{:.6f}".format(max_gc_content)
 
